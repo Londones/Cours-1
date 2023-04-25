@@ -1,0 +1,21 @@
+{
+  "name": "cours-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Calculatrice.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/jest": "^29.4.0",
+    "babel-jest": "^29.4.3"
+  }
+}
