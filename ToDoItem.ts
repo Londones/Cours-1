@@ -1,4 +1,4 @@
-class ToDoItem {
+export class ToDoItem {
     private name: string;
     private content: string;
     private creationDate: Date;
