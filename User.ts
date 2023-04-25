@@ -19,7 +19,7 @@ export class User {
         this.birthDate = birthDate;
         this.email = email;
         this.password = password;
-        this.toDoList = new ToDoList();
+        this.toDoList = new ToDoList(new Array<ToDoItem>());
         this.emailSenderService = new EmailSenderService();
         this.externalAPI = new ExternalAPI();
     }
