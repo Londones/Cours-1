@@ -1,6 +1,7 @@
 import { ExternalAPI } from "./ExternalAPI";
 import { ToDoList } from "./ToDoList";
 import { EmailSenderService } from "./EmailSenderService";
+import { ToDoItem } from "./ToDoItem";
 
 export class User {
     private name: string;
@@ -10,6 +11,7 @@ export class User {
     private password: string;
     private toDoList: ToDoList;
     private emailSenderService: EmailSenderService;
+    private externalAPI: ExternalAPI;
 
     constructor(name: string, surname: string, birthDate: string, email: string, password: string) {
         this.name = name;
@@ -19,11 +21,11 @@ export class User {
         this.password = password;
         this.toDoList = new ToDoList();
         this.emailSenderService = new EmailSenderService();
+        this.externalAPI = new ExternalAPI();
     }
 
-    isValidEmail(): boolean {
-        if (this.email === null) return false;
-        return this.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) !== null;
+    checkEmail(): boolean {
+        return this.externalAPI.checkEmail(this.email);
     }
 
     isValidPassword(): boolean {
@@ -47,7 +49,7 @@ export class User {
     }
 
     isValid(): boolean {
-        return this.isNotEmpty() && this.isValidEmail() && this.isOver13() && this.isValidPassword();
+        return this.isNotEmpty() && this.checkEmail() && this.isOver13() && this.isValidPassword();
     }
 
     canAddThisItem(item: string): boolean {
