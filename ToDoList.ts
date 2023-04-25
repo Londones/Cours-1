@@ -1,9 +1,9 @@
 import { ToDoItem } from "./ToDoItem";
 export class ToDoList {
-    private Items: ToDoItem[];
+    public Items: ToDoItem[];
 
-    constructor() {
-        this.Items = [];
+    constructor(items: Array<ToDoItem>) {
+        this.Items = items;
     }
 
     addItem(item: ToDoItem): void {
