@@ -1,6 +1,7 @@
 import { ExternalAPI } from "./ExternalAPI";
 import { ToDoList } from "./ToDoList";
 import { EmailSenderService } from "./EmailSenderService";
+import { ToDoItem } from "./ToDoItem";
 
 export class User {
     private name: string;
