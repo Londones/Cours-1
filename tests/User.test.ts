@@ -1,7 +1,7 @@
-import { User } from "./User";
-import { ToDoItem } from "./ToDoItem";
+import { User } from "../User";
+import { ToDoItem } from "../ToDoItem";
 const mockExternalAPI = jest.fn().mockImplementation(() => true);
-jest.mock("./ExternalAPI", () => {
+jest.mock("../ExternalAPI", () => {
     return {
         ExternalAPI: jest.fn().mockImplementation(() => {
             return { checkEmail: mockExternalAPI };
@@ -10,7 +10,7 @@ jest.mock("./ExternalAPI", () => {
 });
 
 const mockEmailSenderService = jest.fn().mockImplementation(() => "You have 2 items left to add to your ToDoList");
-jest.mock("./EmailSenderService", () => {
+jest.mock("../EmailSenderService", () => {
     return {
         EmailSenderService: jest.fn().mockImplementation(() => {
             return { sendEmail: mockEmailSenderService };
@@ -21,7 +21,7 @@ jest.mock("./EmailSenderService", () => {
 const mockToDoList = jest.fn().mockImplementation(() => true);
 const mockItemLength = jest.fn().mockImplementation(() => 8);
 const mockAddItem = jest.fn();
-jest.mock("./ToDoList", () => {
+jest.mock("../ToDoList", () => {
     return {
         ToDoList: jest.fn().mockImplementation(() => {
             return {

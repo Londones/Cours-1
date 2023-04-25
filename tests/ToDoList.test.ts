@@ -1,5 +1,5 @@
-import { ToDoList } from "./ToDoList";
-import { ToDoItem } from "./ToDoItem";
+import { ToDoList } from "../ToDoList";
+import { ToDoItem } from "../ToDoItem";
 
 describe("To do list validity", () => {
     test('should have a maximum of 10 items', () => {

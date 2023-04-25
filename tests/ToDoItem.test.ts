@@ -1,4 +1,4 @@
-import { ToDoItem } from "./ToDoItem";
+import { ToDoItem } from "../ToDoItem";
 
 describe("ToDoItem validity", () => {
     test('should have valid content (<1000 characters)', () => {

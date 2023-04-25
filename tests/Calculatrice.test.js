@@ -1,4 +1,4 @@
-const Calculatrice = require("./Calculatrice.js");
+const Calculatrice = require("../Calculatrice.js");
 
 describe("Add function", () => {
   test("should add 1 and 2 to equal 3", () => {
