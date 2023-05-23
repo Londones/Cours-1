@@ -20,5 +20,9 @@ export class ToDoItem {
     getCreationDate(): Date {
         return this.creationDate;
     }
+
+    setCreationDate(date: Date): void {
+        this.creationDate = date;
+    }
 }
 

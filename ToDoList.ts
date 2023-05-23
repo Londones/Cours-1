@@ -2,7 +2,7 @@ import { ToDoItem } from "./ToDoItem";
 export class ToDoList {
     public Items: ToDoItem[];
 
-    constructor(items: Array) {
+    constructor(items: Array<ToDoItem>) {
         this.Items = items;
     }
 
@@ -15,7 +15,7 @@ export class ToDoList {
     }
 
     lastItemCreatedMoreThan30minutesAgo(): boolean {
-        return this.Items[this.Items.length - 1].getCreationDate().getMinutes() - new Date().getMinutes() >= 30;
+        return new Date().getTime() - this.Items[this.Items.length - 1].getCreationDate().getTime() >= 1800000;
     }
 
     listContainsLessThan10Items(): boolean {
